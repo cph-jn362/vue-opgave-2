@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+        <div id="minForm">
+            <h1>Vue.js Form</h1>
+        <p v-if="errors.length > 0">
+            <b>Disse felter mangler at blive udfyldt</b>
+            <ul>
+              <li v-for="error in errors">
+                  {{ error }}
+                </li>
+            </ul>
+          </p>
+        
+      <form action="#" method="post" id="app" @submit="valideringForm">
+        <label for="navn">Navn</label><br>
+        <input type="text" name="navn" id="navn" v-model="navn"><br>
+
+        <label for="email">Email</label><br>
+        <input type="text" name="email" id="email" v-model="email"><br>
+
+        <label for="password">Password</label><br>
+        <input type="password" name="password" id="password" v-model="password"><br>
+
+        <label for="gentagPassword">Gentag password</label><br>
+        <input type="password" name="gentagPassword" id="gentagPassword" v-model="gentagPassword"><br>
+
+        <label for="telefon">Telefon</label><br>
+        <input type="number" name="telefon" id="telefon" v-model="telefon"><br>
+
+        <label for="adresse">Adresse</label><br>
+        <input type="text" name="adresse" id="adresse" v-model="adresse"><br>
+
+        <label for="postnummer">Postnummer</label><br>
+        <input type="number" name="postnummer" id="postnummer" v-model="postnummer"><br>
+   
+        <input type="submit" value="Submit">
+    </form>
+</div>
+    <script src="app.js"></script>
+</body>
+
+</html>
